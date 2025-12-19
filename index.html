@@ -3,83 +3,118 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Marka Performans Dashboard</title>
+    <title>ASO Performans Raporu | Aralık 2025</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
 </head>
-<body class="bg-gray-100 p-8">
-    <div class="max-w-5xl mx-auto bg-white p-10 rounded-2xl shadow-lg">
-        <h1 class="text-3xl font-bold text-gray-800 border-b-4 border-blue-500 pb-4 mb-8 text-center">
-            2025 Yıllık Performans Raporu
-        </h1>
+<body class="bg-gray-50 font-sans leading-normal tracking-normal">
 
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-10">
-            <div class="bg-blue-50 p-6 rounded-xl border border-blue-100">
-                <p class="text-blue-600 font-semibold text-sm uppercase">İnceleme Sayısı (YTD)</p>
-                <p class="text-3xl font-bold text-blue-900">196</p>
-                <p class="text-green-600 text-sm font-bold mt-2">↑ %17.4 Artış</p>
+    <nav class="bg-slate-900 p-6 shadow-lg text-white">
+        <div class="container mx-auto flex justify-between items-center">
+            <div>
+                <h1 class="text-2xl font-bold uppercase tracking-widest">İstanbul Airport ASO Dashboard</h1>
+                <p class="text-sm text-slate-400">Veri Güncelleme: 17-19 Aralık 2025</p>
             </div>
-            <div class="bg-purple-50 p-6 rounded-xl border border-purple-100">
-                <p class="text-purple-600 font-semibold text-sm uppercase">Action Rate (YTD)</p>
-                <p class="text-3xl font-bold text-purple-900">%12.39</p>
-                <p class="text-green-600 text-sm font-bold mt-2">↑ %35.7 Verimlilik</p>
+            <div class="bg-green-500 px-4 py-2 rounded-lg font-bold text-sm">
+                CANLI VERİ (MOBILE ACTION)
             </div>
-            <div class="bg-emerald-50 p-6 rounded-xl border border-emerald-100">
-                <p class="text-emerald-600 font-semibold text-sm uppercase">Ortalama Puan</p>
-                <p class="text-3xl font-bold text-emerald-900">4.66</p>
-                <p class="text-gray-500 text-sm mt-2">Stabil Kalite</p>
+        </div>
+    </nav>
+
+    <div class="container mx-auto py-8 px-4">
+        
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-6 mb-8">
+            <div class="bg-white p-6 rounded-xl shadow-sm border-l-4 border-blue-500">
+                <p class="text-gray-500 text-sm font-medium uppercase">iOS Visibility Score</p>
+                <h2 class="text-3xl font-bold text-gray-800">77.33</h2>
+                <p class="text-green-500 text-sm mt-2"><i class="fas fa-arrow-up"></i> Yükseliş Trendi</p>
+            </div>
+            <div class="bg-white p-6 rounded-xl shadow-sm border-l-4 border-green-500">
+                <p class="text-gray-500 text-sm font-medium uppercase">iOS #1 Keywords</p>
+                <h2 class="text-3xl font-bold text-gray-800">29</h2>
+                <p class="text-slate-400 text-xs mt-2">Toplam 67 Kelime İçinden</p>
+            </div>
+            <div class="bg-white p-6 rounded-xl shadow-sm border-l-4 border-indigo-500">
+                <p class="text-gray-500 text-sm font-medium uppercase">Android Visibility</p>
+                <h2 class="text-3xl font-bold text-gray-800">61.64</h2>
+                <p class="text-blue-500 text-sm mt-2">Sabit/Artışta</p>
+            </div>
+            <div class="bg-white p-6 rounded-xl shadow-sm border-l-4 border-yellow-500">
+                <p class="text-gray-500 text-sm font-medium uppercase">Ortalama Rating</p>
+                <h2 class="text-3xl font-bold text-gray-800">3.0 / 4.3</h2>
+                <p class="text-slate-400 text-xs mt-2">iOS / Android Ayrımı</p>
             </div>
         </div>
 
-        <div class="bg-gray-50 p-6 rounded-xl border border-gray-200 mb-10">
-            <h2 class="text-xl font-bold mb-4 text-gray-700">Görüntülenme Trendi</h2>
-            <canvas id="mainChart" height="100"></canvas>
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+            
+            <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
+                <h3 class="text-lg font-bold mb-4 flex items-center">
+                    <i class="fab fa-apple text-gray-400 mr-2"></i> iOS Kritik Kelime Sıralamaları
+                </h3>
+                <table class="w-full text-left text-sm">
+                    <thead class="bg-gray-50 text-gray-600">
+                        <tr>
+                            <th class="p-3">Keyword</th>
+                            <th class="p-3 text-center">Rank</th>
+                            <th class="p-3 text-right">Volume</th>
+                        </tr>
+                    </thead>
+                    <tbody class="divide-y divide-gray-100">
+                        <tr><td class="p-3 font-medium">istanbul airport</td><td class="p-3 text-center"><span class="bg-green-100 text-green-700 px-2 py-1 rounded">1</span></td><td class="p-3 text-right">55</td></tr>
+                        <tr><td class="p-3 font-medium">iga</td><td class="p-3 text-center"><span class="bg-green-100 text-green-700 px-2 py-1 rounded">1</span></td><td class="p-3 text-right">41</td></tr>
+                        <tr><td class="p-3 font-medium">havalimanı otopark</td><td class="p-3 text-center"><span class="bg-green-100 text-green-700 px-2 py-1 rounded">1</span></td><td class="p-3 text-right">31</td></tr>
+                        <tr><td class="p-3 font-medium">istanbul havaalanı</td><td class="p-3 text-center"><span class="bg-green-100 text-green-700 px-2 py-1 rounded">1</span></td><td class="p-3 text-right">38</td></tr>
+                        <tr><td class="p-3 font-medium">airport parking</td><td class="p-3 text-center"><span class="bg-blue-100 text-blue-700 px-2 py-1 rounded">82</span></td><td class="p-3 text-right">17</td></tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
+                <h3 class="text-lg font-bold mb-4 flex items-center">
+                    <i class="fab fa-android text-green-500 mr-2"></i> Android Kritik Kelime Sıralamaları
+                </h3>
+                <table class="w-full text-left text-sm">
+                    <thead class="bg-gray-50 text-gray-600">
+                        <tr>
+                            <th class="p-3">Keyword</th>
+                            <th class="p-3 text-center">Rank</th>
+                            <th class="p-3 text-right">Volume</th>
+                        </tr>
+                    </thead>
+                    <tbody class="divide-y divide-gray-100">
+                        <tr><td class="p-3 font-medium">istanbul airport</td><td class="p-3 text-center"><span class="bg-green-100 text-green-700 px-2 py-1 rounded">1</span></td><td class="p-3 text-right">5</td></tr>
+                        <tr><td class="p-3 font-medium">iga pass</td><td class="p-3 text-center"><span class="bg-green-100 text-green-700 px-2 py-1 rounded">1</span></td><td class="p-3 text-right">5</td></tr>
+                        <tr><td class="p-3 font-medium">airport</td><td class="p-3 text-center"><span class="bg-green-100 text-green-700 px-2 py-1 rounded">2</span></td><td class="p-3 text-right">40</td></tr>
+                        <tr><td class="p-3 font-medium">uçuş takibi</td><td class="p-3 text-center"><span class="bg-yellow-100 text-yellow-700 px-2 py-1 rounded">7</span></td><td class="p-3 text-right">5</td></tr>
+                        <tr><td class="p-3 font-medium">uçuş bilgisi</td><td class="p-3 text-center"><span class="bg-red-100 text-red-700 px-2 py-1 rounded">57</span></td><td class="p-3 text-right">5</td></tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="bg-white p-6 rounded-xl shadow-sm col-span-1 lg:col-span-2 border border-gray-100">
+                <h3 class="text-lg font-bold mb-4">Metadata Optimizasyon Durumu</h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div class="bg-blue-50 p-4 rounded-lg">
+                        <h4 class="font-bold text-blue-800 mb-2 underline">App Store (iOS)</h4>
+                        <p class="text-sm"><strong>Title:</strong> İstanbul Airport (16/30)</p>
+                        <p class="text-sm mt-1"><strong>Short Description:</strong> İGA İstanbul Airport: Uçuş bilgileri ve havalimanı hizmetlerine erişim sağlayın. (80/80)</p>
+                    </div>
+                    <div class="bg-green-50 p-4 rounded-lg">
+                        <h4 class="font-bold text-green-800 mb-2 underline">Play Store (Android)</h4>
+                        <p class="text-sm"><strong>Title:</strong> Istanbul Airport (16/30)</p>
+                        <p class="text-sm mt-1"><strong>Subtitle:</strong> Uçuş ve Servisler (17/30)</p>
+                    </div>
+                </div>
+            </div>
+
         </div>
 
-        <div class="overflow-x-auto">
-            <table class="w-full text-left">
-                <thead>
-                    <tr class="bg-gray-800 text-white uppercase text-xs">
-                        <th class="p-4">Dönem</th>
-                        <th class="p-4">Görüntülenme</th>
-                        <th class="p-4">Action Rate</th>
-                        <th class="p-4">Yorum Sayısı</th>
-                    </tr>
-                </thead>
-                <tbody class="divide-y divide-gray-200">
-                    <tr>
-                        <td class="p-4 font-medium text-gray-600">2024 YTD (Oca-Kas)</td>
-                        <td class="p-4 text-gray-600">357.1K</td>
-                        <td class="p-4 text-gray-600">%9.13</td>
-                        <td class="p-4 text-gray-600">167</td>
-                    </tr>
-                    <tr class="bg-blue-50">
-                        <td class="p-4 font-bold text-blue-700">2025 YTD (Oca-Kas)</td>
-                        <td class="p-4 font-bold text-blue-700">346.6K</td>
-                        <td class="p-4 font-bold text-blue-700">%12.39</td>
-                        <td class="p-4 font-bold text-blue-700">196</td>
-                    </tr>
-                </tbody>
-            </table>
+        <div class="mt-12 text-center text-gray-400 text-sm">
+            <p>© 2025 ASO Tracking System - Mobile Action Verileriyle Hazırlanmıştır.</p>
         </div>
+
     </div>
-
-    <script>
-        const ctx = document.getElementById('mainChart').getContext('2d');
-        new Chart(ctx, {
-            type: 'line',
-            data: {
-                labels: ['Ocak', 'Mart', 'Mayıs', 'Temmuz', 'Eylül', 'Kasım'],
-                datasets: [{
-                    label: '2025 Görüntülenme',
-                    data: [7.7, 10.8, 50.6, 64.7, 50.9, 3.2],
-                    borderColor: '#3b82f6',
-                    tension: 0.3,
-                    fill: true,
-                    backgroundColor: 'rgba(59, 130, 246, 0.1)'
-                }]
-            }
-        });
-    </script>
 </body>
 </html>
