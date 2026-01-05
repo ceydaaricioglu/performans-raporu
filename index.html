@@ -3,206 +3,67 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>İGA & Global Competitors ASO Report</title>
+    <title>İGA ASO Global War Room | 2026</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap');
-        body { font-family: 'Plus Jakarta Sans', sans-serif; background-color: #0b0f1a; color: #e2e8f0; }
-        .tab-btn { padding: 12px 24px; cursor: pointer; border-bottom: 2px solid transparent; transition: all 0.3s; color: #64748b; font-weight: 800; text-transform: uppercase; font-size: 12px; }
-        .tab-btn.active { border-bottom: 4px solid #3b82f6; color: #ffffff; background: rgba(59, 130, 246, 0.1); }
-        .data-card { background: rgba(30, 41, 59, 0.5); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 24px; padding: 24px; }
-        .keyword-badge { background: rgba(59, 130, 246, 0.2); border: 1px solid rgba(59, 130, 246, 0.3); color: #60a5fa; padding: 4px 12px; border-radius: 8px; font-weight: 700; font-size: 13px; }
+        body { font-family: 'Plus Jakarta Sans', sans-serif; background-color: #050811; color: #cbd5e1; }
+        .glass-panel { background: rgba(15, 23, 42, 0.6); border: 1px solid rgba(59, 130, 246, 0.1); backdrop-filter: blur(12px); border-radius: 2rem; }
+        .tab-btn { padding: 16px 32px; cursor: pointer; border-bottom: 2px solid transparent; transition: all 0.4s; font-weight: 800; text-transform: uppercase; letter-spacing: 0.1em; font-size: 13px; }
+        .tab-btn.active { border-bottom: 4px solid #3b82f6; color: #ffffff; background: linear-gradient(to top, rgba(59, 130, 246, 0.1), transparent); }
+        .keyword-row:hover { background: rgba(59, 130, 246, 0.05); }
     </style>
 </head>
-<body>
+<body class="antialiased">
 
-    <nav class="border-b border-slate-800 bg-slate-900/90 sticky top-0 z-50 backdrop-blur-md">
-        <div class="container mx-auto px-6 flex justify-between items-center h-20">
-            <div class="flex items-center space-x-3">
-                <div class="bg-blue-600 w-10 h-10 rounded-xl flex items-center justify-center font-black italic shadow-lg shadow-blue-500/30">İGA</div>
-                <span class="text-xl font-extrabold tracking-tighter">ASO STRATEGY CENTER</span>
+    <nav class="border-b border-slate-800 bg-slate-950/90 sticky top-0 z-50">
+        <div class="container mx-auto px-6 flex flex-col md:flex-row justify-between items-center h-24">
+            <div class="flex items-center space-x-4">
+                <div class="bg-blue-600 w-12 h-12 rounded-2xl flex items-center justify-center font-black italic text-white shadow-2xl shadow-blue-500/40">İGA</div>
+                <div>
+                    <h1 class="text-xl font-black text-white tracking-tighter">GLOBAL ASO WAR ROOM</h1>
+                    <p class="text-[10px] text-emerald-500 font-bold uppercase tracking-widest italic">Jan 2026 | Market Intel</p>
+                </div>
             </div>
-            <div class="flex" id="tab-container">
-                <div id="btn-comp" class="tab-btn active" onclick="showTab('comp')">Global Rakipler</div>
-                <div id="btn-iga" class="tab-btn" onclick="showTab('iga')">İGA Detay Analizi</div>
+            <div class="flex" id="tab-nav">
+                <div id="btn-global" class="tab-btn active" onclick="switchTab('global')">Global Karşılaştırma</div>
+                <div id="btn-iga" class="tab-btn" onclick="switchTab('iga')">İGA Derin Analiz</div>
             </div>
         </div>
     </nav>
 
-    <main class="container mx-auto py-10 px-6">
+    <main class="container mx-auto py-10 px-6 space-y-12">
 
-        <div id="section-comp" class="space-y-10">
+        <div id="section-global" class="space-y-12">
             
-            <div class="data-card">
-                <div class="flex items-center justify-between mb-8">
-                    <h3 class="text-2xl font-black text-white italic tracking-tight uppercase">Rakip 1: Dubai Airport (DXB) - UAE</h3>
-                    <span class="text-xs font-bold text-slate-500">Konum: United Arab Emirates</span>
-                </div>
-                <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
-                    <div class="bg-slate-800/40 p-6 rounded-2xl border border-red-500/20">
-                        <p class="text-[10px] font-bold text-red-400 uppercase mb-2">Android Görünürlük (Google Play)</p>
-                        <p class="text-4xl font-black">32.56</p>
-                        <p class="text-xs text-slate-400 mt-2 italic">Düşüş Trendi Gözlemlendi</p>
-                    </div>
-                    <div class="bg-slate-800/40 p-6 rounded-2xl border border-slate-700 lg:col-span-2">
-                        <p class="text-[10px] font-bold text-blue-400 uppercase mb-4">iOS İndirme Getiren Kelimeler (Organic Share)</p>
-                        <div class="flex flex-wrap gap-3">
-                            <div class="flex items-center space-x-2 bg-slate-900 px-4 py-2 rounded-lg border border-slate-700">
-                                <span class="text-sm font-bold italic">dxb</span>
-                                <span class="text-blue-500 font-black">%55.0</span>
-                            </div>
-                            <div class="flex items-center space-x-2 bg-slate-900 px-4 py-2 rounded-lg border border-slate-700">
-                                <span class="text-sm font-bold italic">dubai airport</span>
-                                <span class="text-blue-500 font-black">%21.4</span>
-                            </div>
-                        </div>
-                        <p class="text-[10px] text-slate-500 mt-4 italic">Android tarafında "Not Enough Data" uyarısı</p>
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
+                <div class="glass-panel p-8">
+                    <p class="text-[10px] font-black text-blue-400 uppercase mb-2">İGA Visibility (iOS)</p>
+                    <div class="flex items-end space-x-2">
+                        <span class="text-5xl font-black text-white">77.33</span>
+                        <span class="text-xs font-bold text-emerald-400 mb-2 italic underline decoration-emerald-500 underline-offset-4">Top in TR</span>
                     </div>
                 </div>
-            </div>
-
-            <div class="data-card border-l-4 border-l-amber-500">
-                <div class="flex items-center justify-between mb-8">
-                    <h3 class="text-2xl font-black text-white italic tracking-tight uppercase">Rakip 2: Schiphol Amsterdam (AMS) - NL</h3>
-                    <span class="text-xs font-bold text-slate-500">Konum: Netherlands</span>
-                </div>
-                <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
-                    <div class="space-y-6">
-                        <div class="grid grid-cols-2 gap-4">
-                            <div class="bg-slate-800/80 p-5 rounded-xl text-center">
-                                <p class="text-[10px] font-bold text-amber-500 uppercase mb-1 italic">iOS Visibility</p>
-                                <p class="text-3xl font-black">75.51</p>
-                            </div>
-                            <div class="bg-slate-800/80 p-5 rounded-xl text-center">
-                                <p class="text-[10px] font-bold text-amber-500 uppercase mb-1 italic">Android Visibility</p>
-                                <p class="text-3xl font-black">74.40</p>
-                            </div>
-                        </div>
-                        <div class="p-5 bg-slate-900 rounded-xl border border-slate-700">
-                            <p class="text-[10px] font-bold text-slate-500 uppercase mb-3">Pazar Gücü (Netherlands)</p>
-                            <p class="text-sm">Travel Kategorisi: <span class="text-white font-black italic">#5 Sırada</span></p>
-                            <p class="text-sm mt-1">Toplam İnceleme: <span class="text-white font-black italic">37.000+</span></p>
-                        </div>
+                <div class="glass-panel p-8">
+                    <p class="text-[10px] font-black text-amber-500 uppercase mb-2">Schiphol Visibility (NL)</p>
+                    <div class="flex items-end space-x-2">
+                        <span class="text-5xl font-black text-white">75.51</span>
+                        <span class="text-xs font-bold text-slate-500 mb-2">iOS Benchmark</span>
                     </div>
-                    <div class="bg-slate-800/40 p-6 rounded-2xl">
-                        <p class="text-[10px] font-bold text-amber-400 uppercase mb-4">Pazar Dominasyonu (Organic Share)</p>
-                        <div class="space-y-3">
-                            <div class="flex justify-between items-center p-3 bg-slate-900 rounded-lg">
-                                <span class="text-sm font-bold">schiphol</span>
-                                <span class="text-amber-500 font-black">%42.7 (Android)</span>
-                            </div>
-                            <div class="flex justify-between items-center p-3 bg-slate-900 rounded-lg">
-                                <span class="text-sm font-bold">schiphol app</span>
-                                <span class="text-amber-500 font-black">%34.2 (iOS)</span>
-                            </div>
-                        </div>
-                        <p class="text-[10px] text-slate-500 mt-4">İlk 10'da 38 adet anahtar kelime ile pazar lideri</p>
+                </div>
+                <div class="glass-panel p-8">
+                    <p class="text-[10px] font-black text-slate-400 uppercase mb-2">Dubai Visibility (UAE)</p>
+                    <div class="flex items-end space-x-2">
+                        <span class="text-5xl font-black text-white">57.73</span>
+                        <span class="text-xs font-bold text-slate-500 mb-2 italic">Standard</span>
+                    </div>
+                </div>
+                <div class="glass-panel p-8 border-red-500/20">
+                    <p class="text-[10px] font-black text-red-500 uppercase mb-2">Dubai Android Crash</p>
+                    <div class="flex items-end space-x-2">
+                        <span class="text-5xl font-black text-red-500 italic">32.56</span>
+                        <span class="text-xs font-bold text-red-400 mb-2 italic">Declining</span>
                     </div>
                 </div>
             </div>
-        </div>
-
-        <div id="section-iga" class="hidden space-y-10">
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                <div class="data-card border-t-4 border-t-blue-500">
-                    <div class="flex items-center space-x-3 mb-6">
-                        <i class="fab fa-apple text-2xl text-white"></i>
-                        <h3 class="text-xl font-black uppercase italic">App Store Türkiye</h3>
-                    </div>
-                    <div class="space-y-4">
-                        <div class="flex justify-between items-end border-b border-slate-700 pb-4">
-                            <div>
-                                <p class="text-[10px] font-bold text-slate-500 uppercase">Visibility Score</p>
-                                <p class="text-4xl font-black text-white">77.33</p>
-                            </div>
-                            <div class="text-right">
-                                <p class="text-[10px] font-bold text-slate-500 uppercase tracking-widest">Kategori Sırası</p>
-                                <p class="text-2xl font-black text-blue-400">#69 <span class="text-[10px] text-slate-500 italic">Travel</span></p>
-                            </div>
-                        </div>
-                        <div>
-                            <p class="text-[10px] font-bold text-slate-500 uppercase mb-3">Top Organic Share (İndirme Payları)</p>
-                            <div class="space-y-2">
-                                <div class="flex justify-between text-sm p-3 bg-blue-500/10 rounded-lg border border-blue-500/20">
-                                    <span class="font-bold">havaist</span>
-                                    <span class="font-black text-blue-400">%32.8</span>
-                                </div>
-                                <div class="flex justify-between text-sm p-3 bg-slate-800 rounded-lg">
-                                    <span class="font-bold">airport</span>
-                                    <span class="font-black text-blue-400">%17.1</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="data-card border-t-4 border-t-emerald-500">
-                    <div class="flex items-center space-x-3 mb-6 text-emerald-500">
-                        <i class="fab fa-android text-2xl"></i>
-                        <h3 class="text-xl font-black uppercase italic">Google Play Türkiye</h3>
-                    </div>
-                    <div class="space-y-4">
-                        <div class="flex justify-between items-end border-b border-slate-700 pb-4">
-                            <div>
-                                <p class="text-[10px] font-bold text-slate-500 uppercase tracking-widest">Visibility Score</p>
-                                <p class="text-4xl font-black text-white">61.64</p>
-                            </div>
-                            <div class="text-right">
-                                <p class="text-[10px] font-bold text-slate-500 uppercase tracking-widest">Kategori Sırası</p>
-                                <p class="text-2xl font-black text-emerald-400">#52 <span class="text-[10px] text-slate-500 italic">Travel</span></p>
-                            </div>
-                        </div>
-                        <div>
-                            <p class="text-[10px] font-bold text-slate-500 uppercase mb-3">Top Organic Share (İndirme Payları)</p>
-                            <div class="space-y-2">
-                                <div class="flex justify-between text-sm p-3 bg-emerald-500/10 rounded-lg border border-emerald-500/20">
-                                    <span class="font-bold italic italic">istanbul havalimanı</span>
-                                    <span class="font-black text-emerald-400">%15.3</span>
-                                </div>
-                                <div class="flex justify-between text-sm p-3 bg-slate-800 rounded-lg">
-                                    <span class="font-bold italic">ist airport</span>
-                                    <span class="font-black text-emerald-400">%10.7</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="data-card bg-indigo-950/20">
-                <h3 class="text-lg font-black uppercase italic text-white mb-6 underline decoration-blue-500 decoration-4">ASO İyileştirme Fırsatı (Aksiyon Planı)</h3>
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
-                    <div class="space-y-4">
-                        <p class="text-sm leading-relaxed">
-                            <span class="text-blue-400 font-bold">Mevcut Durum:</span> İGA şu an sadece "İstanbul Airport" (16 karakter) başlığını kullanıyor. Subtitle (Alt başlık) alanı ise <span class="text-red-400 font-bold underline">0 karakter</span> ile tamamen boş.
-                        </p>
-                    </div>
-                    <div class="bg-slate-900/50 p-6 rounded-2xl border border-blue-500/30">
-                        <p class="text-xs font-bold text-slate-400 mb-2 uppercase tracking-widest">Rakip Stratejisi (Dubai Örneği)</p>
-                        <p class="text-sm italic italic">Dubai, alt başlıkta "Flight arrivals and departures" (30/30 tam kapasite) kullanarak trafik topluyor. İGA için bu alan en büyük büyüme fırsatıdır.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-    </main>
-
-    <script>
-        function showTab(tabId) {
-            // Sectionları gizle/göster
-            document.getElementById('section-comp').style.display = (tabId === 'comp') ? 'block' : 'none';
-            document.getElementById('section-iga').style.display = (tabId === 'iga') ? 'block' : 'none';
-            
-            // Buton aktiflik sınıflarını yönet
-            document.getElementById('btn-comp').classList.toggle('active', tabId === 'comp');
-            document.getElementById('btn-iga').classList.toggle('active', tabId === 'iga');
-        }
-        
-        // Sayfa yüklendiğinde varsayılan olarak Global Rakipleri göster
-        window.onload = function() {
-            showTab('comp');
-        };
-    </script>
-</body>
-</html>
