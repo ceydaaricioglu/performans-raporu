@@ -3,45 +3,103 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>İGA ASO Dashboard | Analytics 2026</title>
+    <title>İGA Digital | Global ASO Intelligence 2026</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap');
-        body { font-family: 'Plus Jakarta Sans', sans-serif; background-color: #0f172a; color: #f1f5f9; }
-        .glass { background: rgba(30, 41, 59, 0.7); backdrop-filter: blur(12px); border: 1px solid rgba(255, 255, 255, 0.1); }
-        .nav-tab.active { background: #3b82f6; color: white; border-color: #3b82f6; }
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap');
+        body { font-family: 'Inter', sans-serif; background-color: #0f172a; }
+        .glass-dark { background: rgba(15, 23, 42, 0.8); backdrop-filter: blur(12px); border: 1px solid rgba(255, 255, 255, 0.05); }
+        .active-tab { border-bottom: 4px solid #3b82f6; color: #3b82f6; }
     </style>
 </head>
-<body>
+<body class="text-slate-200 min-h-screen">
 
-    <header class="p-6 border-b border-slate-800 bg-slate-900/80 sticky top-0 z-50">
-        <div class="container mx-auto flex flex-col md:flex-row justify-between items-center">
-            <div class="flex items-center space-x-3">
-                <div class="w-10 h-10 bg-blue-600 rounded-lg flex items-center justify-center font-black italic">İGA</div>
-                <h1 class="text-2xl font-black tracking-tighter">ASO DATA HUB</h1>
+    <nav class="bg-slate-900 border-b border-slate-800 sticky top-0 z-50">
+        <div class="container mx-auto px-6 py-4 flex flex-col md:flex-row justify-between items-center">
+            <div class="flex items-center space-x-3 mb-4 md:mb-0">
+                <div class="bg-blue-600 p-2 rounded-lg font-black italic text-white shadow-lg shadow-blue-500/20">İGA</div>
+                <span class="text-xl font-bold tracking-tight">ASO INTELLIGENCE <span class="text-slate-500 font-normal">| 2026</span></span>
             </div>
-            <div class="mt-4 md:mt-0 flex space-x-2 p-1 bg-slate-800 rounded-xl border border-slate-700" id="mainTabs">
-                <button onclick="switchTab('comparison')" class="nav-tab active px-6 py-2 rounded-lg text-sm font-bold transition-all">Küresel Kıyaslama</button>
-                <button onclick="switchTab('brandDetail')" class="nav-tab px-6 py-2 rounded-lg text-sm font-bold transition-all text-slate-400">İGA Marka Detayı</button>
+            <div class="flex space-x-8 text-sm font-bold uppercase tracking-widest" id="tabGroup">
+                <button onclick="switchTab('global')" class="tab-btn active-tab pb-2 transition-all">Küresel Kıyaslama</button>
+                <button onclick="switchTab('brand')" class="tab-btn pb-2 text-slate-500 hover:text-slate-300 transition-all">İGA Detay Analizi</button>
             </div>
         </div>
-    </header>
+    </nav>
 
     <main class="container mx-auto py-10 px-6">
 
-        <div id="comparison-tab">
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
-                <div class="glass p-8 rounded-3xl border-l-4 border-l-blue-500">
-                    <p class="text-[10px] font-bold text-slate-500 uppercase tracking-widest mb-2">İstanbul (TR)</p>
-                    <h3 class="text-4xl font-black">77.33 <span class="text-xs text-blue-400 ml-1">iOS Score</span></h3>
-                    <p class="text-[10px] mt-2 text-slate-400 italic">Market Leader in Turkey</p>
+        <section id="global-section">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-10">
+                <div class="bg-slate-800/50 p-8 rounded-[2rem] border border-slate-700">
+                    <p class="text-[10px] font-black text-blue-400 uppercase tracking-widest mb-2 italic">İGA İstanbul (TR)</p>
+                    <h2 class="text-5xl font-black italic">77.33 <span class="text-xs text-slate-500">iOS</span></h2>
+                    <div class="mt-4 flex items-center text-emerald-400 text-xs font-bold">
+                        <i class="fas fa-arrow-trend-up mr-2"></i> TR Market Lideri
+                    </div>
                 </div>
-                <div class="glass p-8 rounded-3xl border-l-4 border-l-emerald-500">
-                    <p class="text-[10px] font-bold text-slate-500 uppercase tracking-widest mb-2">Amsterdam (NL)</p>
-                    <h3 class="text-4xl font-black">75.51 <span class="text-xs text-emerald-400 ml-1">iOS Score</span></h3>
-                    <p class="text-[10px] mt-2 text-slate-400 italic">Core Competitor</p>
+                <div class="bg-slate-800/50 p-8 rounded-[2rem] border border-slate-700">
+                    <p class="text-[10px] font-black text-amber-500 uppercase tracking-widest mb-2 italic">AMS Schiphol (NL)</p>
+                    <h2 class="text-5xl font-black italic">75.51 <span class="text-xs text-slate-500">iOS</span></h2>
+                    <div class="mt-4 flex items-center text-slate-400 text-xs font-bold">
+                        <i class="fas fa-check-circle mr-2"></i> Global Benchmark
+                    </div>
                 </div>
-                <div class="glass p-8 rounded-3xl border-l-4 border-l-red-500">
-                    <p class="text-[10px] font-bold text-slate-500 uppercase tracking-widest mb-2">Dubai (UAE)</p>
-                    <h3 class="text-4xl font-black text-red-4
+                <div class="bg-slate-800/50 p-8 rounded-[2rem] border border-red-900/20">
+                    <p class="text-[10px] font-black text-red-500 uppercase tracking-widest mb-2 italic">DXB Dubai (UAE)</p>
+                    <h2 class="text-5xl font-black italic text-red-500">32.56 <span class="text-xs text-slate-500">GP</span></h2>
+                    <div class="mt-4 flex items-center text-red-400 text-xs font-bold animate-pulse">
+                        <i class="fas fa-warning mr-2"></i> Critical Decline
+                    </div>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+                <div class="lg:col-span-2 bg-slate-900 rounded-[2.5rem] p-10 border border-slate-800">
+                    <h3 class="text-xl font-black mb-8 italic uppercase tracking-tighter underline decoration-blue-500 underline-offset-8 text-white">Metadata Strateji Analizi</h3>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                        <div class="space-y-4">
+                            <h4 class="text-[10px] font-black text-slate-500 uppercase tracking-widest border-l-2 border-blue-500 pl-3">İGA İstanbul (TR)</h4>
+                            <p class="text-sm"><strong>Başlık:</strong> İstanbul Airport (16/30)</p>
+                            <p class="text-xs text-red-400 italic">Subtitle alanı boş bırakıldı.</p>
+                        </div>
+                        <div class="space-y-4">
+                            <h4 class="text-[10px] font-black text-slate-500 uppercase tracking-widest border-l-2 border-emerald-500 pl-3">Dubai Airport (UAE)</h4>
+                            <p class="text-sm"><strong>Başlık:</strong> Dubai Airport: Flight Info (26/30)</p>
+                            <p class="text-xs text-emerald-400 italic">Subtitle (30/30) tam kapasite kullanıldı.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-slate-900 rounded-[2.5rem] p-10 border border-slate-800">
+                    <h3 class="text-xl font-black mb-8 italic uppercase tracking-tighter text-white">Teknik Karşılaştırma</h3>
+                    <div class="space-y-6">
+                        <div class="flex justify-between border-b border-slate-800 pb-4">
+                            <span class="text-xs font-bold text-slate-400">İGA Boyut</span>
+                            <span class="text-xs font-black text-red-400">199.7 MB</span>
+                        </div>
+                        <div class="flex justify-between border-b border-slate-800 pb-4">
+                            <span class="text-xs font-bold text-slate-400">DXB Boyut</span>
+                            <span class="text-xs font-black text-emerald-400">64.6 MB</span>
+                        </div>
+                        <div class="flex justify-between border-b border-slate-800 pb-4">
+                            <span class="text-xs font-bold text-slate-400">AMS Boyut</span>
+                            <span class="text-xs font-black">141.9 MB</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="brand-section" class="hidden animate-fadeIn">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-10">
+                <div class="bg-white rounded-[2.5rem] p-10 text-slate-900 shadow-2xl relative overflow-hidden">
+                    <i class="fab fa-apple absolute -right-4 -top-4 text-[8rem] text-slate-50"></i>
+                    <h3 class="text-xl font-black mb-8 italic uppercase tracking-tighter relative">App Store Organik Dominasyon</h3>
+                    <div class="space-y-4 relative">
+                        <div class="flex justify-between p-4 bg-slate-50 rounded-2xl border border-slate-200">
+                            <span class="font-bold">havaist</span>
+                            <span class="font-black text-blue-600">%32.8</span>
+                        </div>
+                        <div class="flex justify-between p-4 bg-slate-50 rounded-2xl border border-slate-
