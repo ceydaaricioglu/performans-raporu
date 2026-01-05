@@ -9,8 +9,7 @@
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap');
         body { font-family: 'Inter', sans-serif; background-color: #0f172a; }
-        .glass-dark { background: rgba(15, 23, 42, 0.8); backdrop-filter: blur(12px); border: 1px solid rgba(255, 255, 255, 0.05); }
-        .active-tab { border-bottom: 4px solid #3b82f6; color: #3b82f6; }
+        .active-tab { border-bottom: 4px solid #3b82f6; color: #3b82f6 !important; }
     </style>
 </head>
 <body class="text-slate-200 min-h-screen">
@@ -21,9 +20,9 @@
                 <div class="bg-blue-600 p-2 rounded-lg font-black italic text-white shadow-lg shadow-blue-500/20">İGA</div>
                 <span class="text-xl font-bold tracking-tight">ASO INTELLIGENCE <span class="text-slate-500 font-normal">| 2026</span></span>
             </div>
-            <div class="flex space-x-8 text-sm font-bold uppercase tracking-widest" id="tabGroup">
-                <button onclick="switchTab('global')" class="tab-btn active-tab pb-2 transition-all">Küresel Kıyaslama</button>
-                <button onclick="switchTab('brand')" class="tab-btn pb-2 text-slate-500 hover:text-slate-300 transition-all">İGA Detay Analizi</button>
+            <div class="flex space-x-8 text-sm font-bold uppercase tracking-widest">
+                <button id="btn-global" onclick="switchTab('global')" class="tab-btn active-tab pb-2 text-blue-600 transition-all">Küresel Kıyaslama</button>
+                <button id="btn-brand" onclick="switchTab('brand')" class="tab-btn pb-2 text-slate-500 hover:text-slate-300 transition-all">İGA Detay Analizi</button>
             </div>
         </div>
     </nav>
@@ -46,7 +45,7 @@
                         <i class="fas fa-check-circle mr-2"></i> Global Benchmark
                     </div>
                 </div>
-                <div class="bg-slate-800/50 p-8 rounded-[2rem] border border-red-900/20">
+                <div class="bg-slate-800/50 p-8 rounded-[2rem] border border-slate-700">
                     <p class="text-[10px] font-black text-red-500 uppercase tracking-widest mb-2 italic">DXB Dubai (UAE)</p>
                     <h2 class="text-5xl font-black italic text-red-500">32.56 <span class="text-xs text-slate-500">GP</span></h2>
                     <div class="mt-4 flex items-center text-red-400 text-xs font-bold animate-pulse">
@@ -67,39 +66,53 @@
                         <div class="space-y-4">
                             <h4 class="text-[10px] font-black text-slate-500 uppercase tracking-widest border-l-2 border-emerald-500 pl-3">Dubai Airport (UAE)</h4>
                             <p class="text-sm"><strong>Başlık:</strong> Dubai Airport: Flight Info (26/30)</p>
-                            <p class="text-xs text-emerald-400 italic">Subtitle (30/30) tam kapasite kullanıldı.</p>
+                            <p class="text-xs text-emerald-400 italic">Subtitle (30/30) aktif kullanıldı.</p>
                         </div>
                     </div>
                 </div>
 
-                <div class="bg-slate-900 rounded-[2.5rem] p-10 border border-slate-800">
-                    <h3 class="text-xl font-black mb-8 italic uppercase tracking-tighter text-white">Teknik Karşılaştırma</h3>
+                <div class="bg-slate-900 rounded-[2.5rem] p-10 border border-slate-800 text-center">
+                    <h3 class="text-xl font-black mb-8 italic uppercase tracking-tighter text-white underline decoration-emerald-500">Teknik Boyut</h3>
                     <div class="space-y-6">
-                        <div class="flex justify-between border-b border-slate-800 pb-4">
+                        <div class="flex justify-between border-b border-slate-800 pb-4 italic">
                             <span class="text-xs font-bold text-slate-400">İGA Boyut</span>
                             <span class="text-xs font-black text-red-400">199.7 MB</span>
                         </div>
-                        <div class="flex justify-between border-b border-slate-800 pb-4">
+                        <div class="flex justify-between border-b border-slate-800 pb-4 italic">
                             <span class="text-xs font-bold text-slate-400">DXB Boyut</span>
                             <span class="text-xs font-black text-emerald-400">64.6 MB</span>
                         </div>
-                        <div class="flex justify-between border-b border-slate-800 pb-4">
+                        <div class="flex justify-between border-b border-slate-800 pb-4 italic">
                             <span class="text-xs font-bold text-slate-400">AMS Boyut</span>
-                            <span class="text-xs font-black">141.9 MB</span>
+                            <span class="text-xs font-black text-amber-500">141.9 MB</span>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section id="brand-section" class="hidden animate-fadeIn">
+        <section id="brand-section" class="hidden">
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-10">
-                <div class="bg-white rounded-[2.5rem] p-10 text-slate-900 shadow-2xl relative overflow-hidden">
-                    <i class="fab fa-apple absolute -right-4 -top-4 text-[8rem] text-slate-50"></i>
-                    <h3 class="text-xl font-black mb-8 italic uppercase tracking-tighter relative">App Store Organik Dominasyon</h3>
-                    <div class="space-y-4 relative">
+                <div class="bg-white rounded-[2.5rem] p-10 text-slate-900 shadow-2xl">
+                    <h3 class="text-xl font-black mb-8 italic uppercase tracking-tighter border-b border-slate-100 pb-4">App Store Organik Paylar</h3>
+                    <div class="space-y-4">
                         <div class="flex justify-between p-4 bg-slate-50 rounded-2xl border border-slate-200">
                             <span class="font-bold">havaist</span>
                             <span class="font-black text-blue-600">%32.8</span>
                         </div>
-                        <div class="flex justify-between p-4 bg-slate-50 rounded-2xl border border-slate-
+                        <div class="flex justify-between p-4 bg-slate-50 rounded-2xl border border-slate-200">
+                            <span class="font-bold italic">airport</span>
+                            <span class="font-black text-blue-600">%17.1</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-emerald-500 rounded-[2.5rem] p-10 text-slate-900 shadow-2xl">
+                    <h3 class="text-xl font-black mb-8 italic uppercase tracking-tighter border-b border-white/20 pb-4">Google Play Organik Paylar</h3>
+                    <div class="space-y-4">
+                        <div class="flex justify-between p-4 bg-white/20 rounded-2xl border border-white/20">
+                            <span class="font-bold">istanbul havalimanı</span>
+                            <span class="font-black italic">%15.3</span>
+                        </div>
+                        <div class="flex justify-between p-4 bg-white/20 rounded-2xl border border-white/20">
+                            <span class="font-bold italic italic
