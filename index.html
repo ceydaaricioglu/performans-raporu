@@ -3,117 +3,166 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ASO Performans Raporu | Aralık 2025</title>
+    <title>İstanbul Airport ASO Dashboard | Türkiye 2025</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
 </head>
-<body class="bg-gray-50 font-sans leading-normal tracking-normal">
+<body class="bg-slate-50 font-sans">
 
-    <nav class="bg-slate-900 p-6 shadow-lg text-white">
+    <nav class="bg-indigo-950 p-6 shadow-xl text-white">
         <div class="container mx-auto flex justify-between items-center">
             <div>
-                <h1 class="text-2xl font-bold uppercase tracking-widest">İstanbul Airport ASO Dashboard</h1>
-                <p class="text-sm text-slate-400">Veri Güncelleme: 17-19 Aralık 2025</p>
+                <h1 class="text-2xl font-black tracking-tighter italic">İGA ASO PERFORMANCE</h1>
+                <p class="text-xs text-indigo-300 uppercase font-bold tracking-widest">Region: Turkey 🇹🇷 | App Store Data</p>
             </div>
-            <div class="bg-green-500 px-4 py-2 rounded-lg font-bold text-sm">
-                CANLI VERİ (MOBILE ACTION)
+            <div class="flex items-center space-x-4 text-sm">
+                <span class="bg-indigo-800 px-3 py-1 rounded-full border border-indigo-700 font-mono italic text-indigo-200">v2.6.1 Live</span>
+                <span class="bg-emerald-500 text-emerald-950 px-4 py-1 rounded-full font-bold shadow-lg shadow-emerald-500/20 underline">ORGANIC SYNCED</span>
             </div>
         </div>
     </nav>
 
-    <div class="container mx-auto py-8 px-4">
+    <div class="container mx-auto py-10 px-6">
         
-        <div class="grid grid-cols-1 md:grid-cols-4 gap-6 mb-8">
-            <div class="bg-white p-6 rounded-xl shadow-sm border-l-4 border-blue-500">
-                <p class="text-gray-500 text-sm font-medium uppercase">iOS Visibility Score</p>
-                <h2 class="text-3xl font-bold text-gray-800">77.33</h2>
-                <p class="text-green-500 text-sm mt-2"><i class="fas fa-arrow-up"></i> Yükseliş Trendi</p>
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-6 mb-10">
+            <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-200 hover:border-indigo-400 transition-all group">
+                <p class="text-slate-400 text-xs font-bold uppercase tracking-widest mb-1">Visibility Score</p>
+                <div class="flex items-end space-x-2">
+                    <h2 class="text-4xl font-black text-slate-800 leading-none">77.33</h2>
+                    <span class="text-emerald-500 text-sm font-bold mb-1"><i class="fas fa-caret-up"></i> +12%</span>
+                </div>
+                <div class="h-1 bg-slate-100 mt-4 rounded-full overflow-hidden">
+                    <div class="h-full bg-indigo-500 w-[77%]"></div>
+                </div>
             </div>
-            <div class="bg-white p-6 rounded-xl shadow-sm border-l-4 border-green-500">
-                <p class="text-gray-500 text-sm font-medium uppercase">iOS #1 Keywords</p>
-                <h2 class="text-3xl font-bold text-gray-800">29</h2>
-                <p class="text-slate-400 text-xs mt-2">Toplam 67 Kelime İçinden</p>
+
+            <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-200 hover:border-emerald-400 transition-all">
+                <p class="text-slate-400 text-xs font-bold uppercase tracking-widest mb-1">Organic Downloads</p>
+                <div class="flex items-end space-x-2">
+                    <h2 class="text-4xl font-black text-slate-800 leading-none">135K</h2>
+                    <span class="text-slate-400 text-xs mb-1 italic">YTD (Jan-Nov)</span>
+                </div>
+                <p class="text-emerald-500 text-xs font-bold mt-3"><i class="fas fa-chart-line"></i> Efficiency up by 47.3%</p>
             </div>
-            <div class="bg-white p-6 rounded-xl shadow-sm border-l-4 border-indigo-500">
-                <p class="text-gray-500 text-sm font-medium uppercase">Android Visibility</p>
-                <h2 class="text-3xl font-bold text-gray-800">61.64</h2>
-                <p class="text-blue-500 text-sm mt-2">Sabit/Artışta</p>
+
+            <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-200">
+                <p class="text-slate-400 text-xs font-bold uppercase tracking-widest mb-1">Action Rate</p>
+                <div class="flex items-end space-x-2">
+                    <h2 class="text-4xl font-black text-slate-800 leading-none">31.66%</h2>
+                </div>
+                <p class="text-indigo-400 text-xs mt-3">Avg. Rating: 4.58 (2025)</p>
             </div>
-            <div class="bg-white p-6 rounded-xl shadow-sm border-l-4 border-yellow-500">
-                <p class="text-gray-500 text-sm font-medium uppercase">Ortalama Rating</p>
-                <h2 class="text-3xl font-bold text-gray-800">3.0 / 4.3</h2>
-                <p class="text-slate-400 text-xs mt-2">iOS / Android Ayrımı</p>
+
+            <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-200">
+                <p class="text-slate-400 text-xs font-bold uppercase tracking-widest mb-1">Top 1 Ranking</p>
+                <div class="flex items-end space-x-2">
+                    <h2 class="text-4xl font-black text-slate-800 leading-none">29</h2>
+                    <span class="text-slate-400 text-xs mb-1 italic">Keywords</span>
+                </div>
+                <p class="text-indigo-400 text-xs mt-3">Total Tracked: 67</p>
             </div>
         </div>
 
-        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
             
-            <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
-                <h3 class="text-lg font-bold mb-4 flex items-center">
-                    <i class="fab fa-apple text-gray-400 mr-2"></i> iOS Kritik Kelime Sıralamaları
-                </h3>
-                <table class="w-full text-left text-sm">
-                    <thead class="bg-gray-50 text-gray-600">
-                        <tr>
-                            <th class="p-3">Keyword</th>
-                            <th class="p-3 text-center">Rank</th>
-                            <th class="p-3 text-right">Volume</th>
-                        </tr>
-                    </thead>
-                    <tbody class="divide-y divide-gray-100">
-                        <tr><td class="p-3 font-medium">istanbul airport</td><td class="p-3 text-center"><span class="bg-green-100 text-green-700 px-2 py-1 rounded">1</span></td><td class="p-3 text-right">55</td></tr>
-                        <tr><td class="p-3 font-medium">iga</td><td class="p-3 text-center"><span class="bg-green-100 text-green-700 px-2 py-1 rounded">1</span></td><td class="p-3 text-right">41</td></tr>
-                        <tr><td class="p-3 font-medium">havalimanı otopark</td><td class="p-3 text-center"><span class="bg-green-100 text-green-700 px-2 py-1 rounded">1</span></td><td class="p-3 text-right">31</td></tr>
-                        <tr><td class="p-3 font-medium">istanbul havaalanı</td><td class="p-3 text-center"><span class="bg-green-100 text-green-700 px-2 py-1 rounded">1</span></td><td class="p-3 text-right">38</td></tr>
-                        <tr><td class="p-3 font-medium">airport parking</td><td class="p-3 text-center"><span class="bg-blue-100 text-blue-700 px-2 py-1 rounded">82</span></td><td class="p-3 text-right">17</td></tr>
-                    </tbody>
-                </table>
-            </div>
-
-            <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
-                <h3 class="text-lg font-bold mb-4 flex items-center">
-                    <i class="fab fa-android text-green-500 mr-2"></i> Android Kritik Kelime Sıralamaları
-                </h3>
-                <table class="w-full text-left text-sm">
-                    <thead class="bg-gray-50 text-gray-600">
-                        <tr>
-                            <th class="p-3">Keyword</th>
-                            <th class="p-3 text-center">Rank</th>
-                            <th class="p-3 text-right">Volume</th>
-                        </tr>
-                    </thead>
-                    <tbody class="divide-y divide-gray-100">
-                        <tr><td class="p-3 font-medium">istanbul airport</td><td class="p-3 text-center"><span class="bg-green-100 text-green-700 px-2 py-1 rounded">1</span></td><td class="p-3 text-right">5</td></tr>
-                        <tr><td class="p-3 font-medium">iga pass</td><td class="p-3 text-center"><span class="bg-green-100 text-green-700 px-2 py-1 rounded">1</span></td><td class="p-3 text-right">5</td></tr>
-                        <tr><td class="p-3 font-medium">airport</td><td class="p-3 text-center"><span class="bg-green-100 text-green-700 px-2 py-1 rounded">2</span></td><td class="p-3 text-right">40</td></tr>
-                        <tr><td class="p-3 font-medium">uçuş takibi</td><td class="p-3 text-center"><span class="bg-yellow-100 text-yellow-700 px-2 py-1 rounded">7</span></td><td class="p-3 text-right">5</td></tr>
-                        <tr><td class="p-3 font-medium">uçuş bilgisi</td><td class="p-3 text-center"><span class="bg-red-100 text-red-700 px-2 py-1 rounded">57</span></td><td class="p-3 text-right">5</td></tr>
-                    </tbody>
-                </table>
-            </div>
-
-            <div class="bg-white p-6 rounded-xl shadow-sm col-span-1 lg:col-span-2 border border-gray-100">
-                <h3 class="text-lg font-bold mb-4">Metadata Optimizasyon Durumu</h3>
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                    <div class="bg-blue-50 p-4 rounded-lg">
-                        <h4 class="font-bold text-blue-800 mb-2 underline">App Store (iOS)</h4>
-                        <p class="text-sm"><strong>Title:</strong> İstanbul Airport (16/30)</p>
-                        <p class="text-sm mt-1"><strong>Short Description:</strong> İGA İstanbul Airport: Uçuş bilgileri ve havalimanı hizmetlerine erişim sağlayın. (80/80)</p>
+            <div class="lg:col-span-2 space-y-8">
+                <div class="bg-white rounded-3xl shadow-sm border border-slate-200 overflow-hidden">
+                    <div class="bg-slate-50 p-6 border-b border-slate-200 flex justify-between items-center">
+                        <h3 class="font-black text-slate-800 uppercase tracking-tighter">Organic Download History by Keyword</h3>
+                        <span class="bg-indigo-100 text-indigo-700 text-[10px] px-2 py-1 rounded font-bold uppercase tracking-widest">Apple Ads Integration</span>
                     </div>
-                    <div class="bg-green-50 p-4 rounded-lg">
-                        <h4 class="font-bold text-green-800 mb-2 underline">Play Store (Android)</h4>
-                        <p class="text-sm"><strong>Title:</strong> Istanbul Airport (16/30)</p>
-                        <p class="text-sm mt-1"><strong>Subtitle:</strong> Uçuş ve Servisler (17/30)</p>
+                    <div class="p-0">
+                        <table class="w-full text-left text-sm">
+                            <thead class="bg-slate-50/50 text-slate-500 border-b border-slate-100">
+                                <tr>
+                                    <th class="p-5 font-bold uppercase text-[10px] tracking-widest">Keyword</th>
+                                    <th class="p-5 font-bold uppercase text-[10px] tracking-widest">Organic Downloads (%)</th>
+                                    <th class="p-5 font-bold uppercase text-[10px] tracking-widest text-center">Rank</th>
+                                    <th class="p-5 font-bold uppercase text-[10px] tracking-widest text-right">Volume</th>
+                                </tr>
+                            </thead>
+                            <tbody class="divide-y divide-slate-100">
+                                <tr class="hover:bg-indigo-50/30 transition-colors">
+                                    <td class="p-5 font-black text-slate-700">havaist</td>
+                                    <td class="p-5">
+                                        <div class="flex items-center space-x-2">
+                                            <div class="w-24 bg-slate-100 h-1.5 rounded-full overflow-hidden">
+                                                <div class="h-full bg-indigo-500 w-[32.8%]"></div>
+                                            </div>
+                                            <span class="font-bold text-indigo-600">32.8%</span>
+                                        </div>
+                                    </td>
+                                    <td class="p-5 text-center"><span class="bg-emerald-100 text-emerald-700 px-3 py-1 rounded-full font-black">3</span></td>
+                                    <td class="p-5 text-right font-mono font-bold">49</td>
+                                </tr>
+                                <tr class="hover:bg-indigo-50/30">
+                                    <td class="p-5 font-black text-slate-700">istanbul airport</td>
+                                    <td class="p-5">
+                                        <div class="flex items-center space-x-2">
+                                            <div class="w-24 bg-slate-100 h-1.5 rounded-full overflow-hidden">
+                                                <div class="h-full bg-emerald-500 w-[5.24%]"></div>
+                                            </div>
+                                            <span class="font-bold text-emerald-600">5.24%</span>
+                                        </div>
+                                    </td>
+                                    <td class="p-5 text-center"><span class="bg-emerald-100 text-emerald-700 px-3 py-1 rounded-full font-black">1</span></td>
+                                    <td class="p-5 text-right font-mono font-bold">55</td>
+                                </tr>
+                                <tr class="hover:bg-indigo-50/30">
+                                    <td class="p-5 font-black text-slate-700">airport</td>
+                                    <td class="p-5">
+                                        <div class="flex items-center space-x-2">
+                                            <div class="w-24 bg-slate-100 h-1.5 rounded-full overflow-hidden">
+                                                <div class="h-full bg-blue-500 w-[14.39%]"></div>
+                                            </div>
+                                            <span class="font-bold text-blue-600">14.39%</span>
+                                        </div>
+                                    </td>
+                                    <td class="p-5 text-center"><span class="bg-emerald-100 text-emerald-700 px-3 py-1 rounded-full font-black">3</span></td>
+                                    <td class="p-5 text-right font-mono font-bold">40</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            <div class="space-y-8">
+                <div class="bg-indigo-900 rounded-3xl p-8 text-white shadow-xl shadow-indigo-900/20">
+                    <h4 class="text-sm font-bold uppercase tracking-widest text-indigo-300 mb-6 underline decoration-emerald-500 underline-offset-8">Critical Insights</h4>
+                    <ul class="space-y-6">
+                        <li class="flex items-start space-x-4">
+                            <div class="bg-emerald-500/20 p-2 rounded-lg text-emerald-400"><i class="fas fa-star"></i></div>
+                            <p class="text-sm leading-relaxed"><strong>Nov 2025 Rating Spike:</strong> Avg. rating reached <span class="text-emerald-400 font-black italic underline">5.00</span> with 3 reviews, overcoming 2024's low performance.</p>
+                        </li>
+                        <li class="flex items-start space-x-4">
+                            <div class="bg-amber-500/20 p-2 rounded-lg text-amber-400"><i class="fas fa-bolt"></i></div>
+                            <p class="text-sm leading-relaxed"><strong>Conversion Master:</strong> Action Rate jumped from 25.23% to <span class="text-amber-400 font-bold italic">37.17%</span> in Nov-25.</p>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="bg-white rounded-3xl p-8 border border-slate-200">
+                    <h4 class="font-black text-slate-800 uppercase text-xs tracking-widest mb-6">Metadata Audit</h4>
+                    <div class="space-y-4">
+                        <div class="p-4 bg-slate-50 rounded-xl">
+                            <p class="text-[10px] font-bold text-slate-400 uppercase tracking-widest">App Title (16/30)</p>
+                            <p class="text-sm font-black text-slate-700 mt-1">İstanbul Airport</p>
+                        </div>
+                        <div class="p-4 bg-slate-50 rounded-xl">
+                            <p class="text-[10px] font-bold text-slate-400 uppercase tracking-widest">Short Description (80/80)</p>
+                            <p class="text-xs font-medium text-slate-600 mt-1 leading-relaxed italic underline italic">İGA İstanbul Airport: Uçuş bilgileri ve havalimanı hizmetlerine erişim sağlayın.</p>
+                        </div>
                     </div>
                 </div>
             </div>
 
         </div>
 
-        <div class="mt-12 text-center text-gray-400 text-sm">
-            <p>© 2025 ASO Tracking System - Mobile Action Verileriyle Hazırlanmıştır.</p>
-        </div>
+        <footer class="mt-20 text-center border-t border-slate-200 pt-10">
+            <p class="text-slate-400 text-[10px] uppercase font-bold tracking-[0.3em]">© 2026 İGA DIGITAL - ASO DATA WAREHOUSE</p>
+        </footer>
 
     </div>
 </body>
