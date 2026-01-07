@@ -11,10 +11,10 @@
         body { font-family: 'Plus Jakarta Sans', sans-serif; background-color: #020617; color: #f8fafc; }
         .data-card { background: rgba(30, 41, 59, 0.4); border: 1px solid rgba(255, 255, 255, 0.05); border-radius: 24px; padding: 32px; height: 100%; }
         .tab-btn { padding: 14px 24px; cursor: pointer; transition: all 0.3s; font-weight: 800; font-size: 11px; letter-spacing: 0.05em; border-radius: 12px; }
-        .tab-btn.active { background: #3b82f6; color: white; box-shadow: 0 10px 15px -3px rgba(59, 130, 246, 0.3); }
+        .tab-btn.active { background: #3b82f6 !important; color: white !important; box-shadow: 0 10px 15px -3px rgba(59, 130, 246, 0.3); }
         .vol-badge { background: #1e293b; color: #60a5fa; padding: 2px 8px; border-radius: 6px; font-family: monospace; }
         .rank-badge { background: #064e3b; color: #34d399; padding: 2px 8px; border-radius: 6px; font-weight: 800; }
-        .animate-fadeIn { animation: fadeIn 0.4s ease-out; }
+        .animate-fadeIn { animation: fadeIn 0.4s ease-in-out; }
         @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
     </style>
 </head>
@@ -27,7 +27,7 @@
                     <div class="bg-blue-600 w-12 h-12 rounded-2xl flex items-center justify-center font-black italic text-white shadow-xl">İGA</div>
                     <h1 class="text-xl font-black">ASO INTELLIGENCE <span class="text-slate-500 font-normal">| 2026 MASTER REPORT</span></h1>
                 </div>
-                <div class="flex flex-wrap justify-center gap-2 bg-slate-900 p-1.5 rounded-2xl border border-slate-800">
+                <div class="flex flex-wrap justify-center gap-2 bg-slate-900 p-1.5 rounded-2xl border border-slate-800" id="main-nav">
                     <button onclick="switchTab('iga')" id="btn-iga" class="tab-btn active">İSTANBUL AIRPORT</button>
                     <button onclick="switchTab('dxb')" id="btn-dxb" class="tab-btn text-slate-400">DUBAI (DXB)</button>
                     <button onclick="switchTab('ams')" id="btn-ams" class="tab-btn text-slate-400">SCHIPHOL (AMS)</button>
@@ -40,20 +40,20 @@
     <main class="container mx-auto mt-10 px-6">
 
         <div id="section-iga" class="space-y-10 animate-fadeIn">
-            <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
-                <div class="data-card bg-blue-600/10 border-blue-500/20 text-center">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-6 text-center">
+                <div class="data-card bg-blue-600/10 border-blue-500/20">
                     <p class="text-[10px] font-bold text-blue-400 uppercase mb-2">iOS Visibility Score</p>
                     <p class="text-4xl font-black">77.33 <span class="text-xs text-slate-500">TR</span></p>
                 </div>
-                <div class="data-card bg-emerald-600/10 border-emerald-500/20 text-center">
+                <div class="data-card bg-emerald-600/10 border-emerald-500/20">
                     <p class="text-[10px] font-bold text-emerald-400 uppercase mb-2">Android Visibility Score</p>
                     <p class="text-4xl font-black">61.64 <span class="text-xs text-slate-500">TR</span></p>
                 </div>
-                <div class="data-card text-center">
+                <div class="data-card">
                     <p class="text-[10px] font-bold text-slate-500 uppercase mb-2">iOS Category Rank</p>
                     <p class="text-4xl font-black text-white">#69 <span class="text-xs text-slate-500 italic">Travel</span></p>
                 </div>
-                <div class="data-card text-center">
+                <div class="data-card">
                     <p class="text-[10px] font-bold text-slate-500 uppercase mb-2">Android Rating</p>
                     <p class="text-4xl font-black text-emerald-400">4.33 <span class="text-xs text-slate-500 italic">Avg</span></p>
                 </div>
@@ -68,11 +68,11 @@
                                 <th class="pb-4">Keyword</th><th class="pb-4">Vol</th><th class="pb-4">Rank</th><th class="pb-4 text-right">Share</th>
                             </tr></thead>
                             <tbody class="divide-y divide-slate-800/50">
-                                <tr><td class="py-4 font-bold">havaist</td><td><span class="vol-badge">49</span></td><td><span class="rank-badge">#3</span></td><td class="text-right font-black text-blue-400">32.8%</td></tr>
-                                <tr><td class="py-4 font-bold">airport</td><td><span class="vol-badge">40</span></td><td><span class="rank-badge">#3</span></td><td class="text-right font-black text-blue-400">17.1%</td></tr>
-                                <tr><td class="py-4 font-bold italic italic">istanbul</td><td><span class="vol-badge">48</span></td><td>#11</td><td class="text-right font-black text-blue-400">8.0%</td></tr>
-                                <tr><td class="py-4 font-bold italic italic italic">sabiha gökçen</td><td><span class="vol-badge">29</span></td><td>#2</td><td class="text-right font-black text-blue-400">5.1%</td></tr>
-                                <tr><td class="py-4 font-bold italic italic italic italic">iga</td><td><span class="vol-badge">16</span></td><td><span class="rank-badge">#1</span></td><td class="text-right font-black text-blue-400">2.8%</td></tr>
+                                <tr><td class="py-4 font-bold italic">havaist</td><td><span class="vol-badge">49</span></td><td><span class="rank-badge">#3</span></td><td class="text-right font-black text-blue-400">32.8%</td></tr>
+                                <tr><td class="py-4 font-bold italic">airport</td><td><span class="vol-badge">40</span></td><td><span class="rank-badge">#3</span></td><td class="text-right font-black text-blue-400">17.1%</td></tr>
+                                <tr><td class="py-4 font-bold italic">istanbul</td><td><span class="vol-badge">48</span></td><td>#11</td><td class="text-right font-black text-blue-400">8.0%</td></tr>
+                                <tr><td class="py-4 font-bold italic">sabiha gökçen</td><td><span class="vol-badge">29</span></td><td>#2</td><td class="text-right font-black text-blue-400">5.1%</td></tr>
+                                <tr><td class="py-4 font-bold italic">iga</td><td><span class="vol-badge">16</span></td><td><span class="rank-badge">#1</span></td><td class="text-right font-black text-blue-400">2.8%</td></tr>
                             </tbody>
                         </table>
                     </div>
@@ -86,55 +86,75 @@
                                 <th class="pb-4">Keyword</th><th class="pb-4">Vol</th><th class="pb-4">Rank</th><th class="pb-4 text-right">Share</th>
                             </tr></thead>
                             <tbody class="divide-y divide-slate-800/50">
-                                <tr><td class="py-4 font-bold">istanbul havalimanı</td><td><span class="vol-badge">61</span></td><td><span class="rank-badge">#1</span></td><td class="text-right font-black text-emerald-400">15.3%</td></tr>
-                                <tr><td class="py-4 font-bold">istanbul airport</td><td><span class="vol-badge">55</span></td><td><span class="rank-badge">#1</span></td><td class="text-right font-black text-emerald-400">10.7%</td></tr>
+                                <tr><td class="py-4 font-bold italic">istanbul havalimanı</td><td><span class="vol-badge">61</span></td><td><span class="rank-badge">#1</span></td><td class="text-right font-black text-emerald-400">15.3%</td></tr>
+                                <tr><td class="py-4 font-bold italic">istanbul airport</td><td><span class="vol-badge">55</span></td><td><span class="rank-badge">#1</span></td><td class="text-right font-black text-emerald-400">10.7%</td></tr>
                                 <tr><td class="py-4 font-bold italic">ist airport</td><td><span class="vol-badge">55</span></td><td><span class="rank-badge">#1</span></td><td class="text-right font-black text-emerald-400">10.7%</td></tr>
-                                <tr><td class="py-4 font-bold italic italic">türk hava yolları</td><td><span class="vol-badge">53</span></td><td>#2</td><td class="text-right font-black text-emerald-400">3.8%</td></tr>
+                                <tr><td class="py-4 font-bold italic">türk hava yolları</td><td><span class="vol-badge">53</span></td><td>#2</td><td class="text-right font-black text-emerald-400">3.8%</td></tr>
                             </tbody>
                         </table>
+                    </div>
+                </div>
+            </div>
+
+            <div class="data-card">
+                <h3 class="text-lg font-black italic mb-6">İGA Metadata & Technical Details</h3>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-sm">
+                    <div class="bg-slate-900/50 p-6 rounded-2xl border border-slate-800">
+                        <p class="text-[10px] font-bold text-slate-500 uppercase mb-2 italic">Metadata Audit</p>
+                        <p>Title: <span class="font-bold underline italic">İstanbul Airport (16/30)</span></p>
+                        <p class="text-red-400 mt-1 italic italic italic">Subtitle: Empty (Action Required)</p>
+                    </div>
+                    <div class="bg-slate-900/50 p-6 rounded-2xl border border-slate-800 italic">
+                        <p class="text-[10px] font-bold text-slate-500 uppercase mb-2">Core Keyword Stats</p>
+                        <p>Keyword "istanbul airport": <span class="font-bold">55 Volume / 67 Chance</span></p>
+                        <p>Keyword "iga": <span class="font-bold underline">Rank #1 (16 Volume)</span></p>
+                    </div>
+                    <div class="bg-slate-900/50 p-6 rounded-2xl border border-slate-800 text-center italic italic italic italic">
+                        <p class="text-[10px] font-bold text-slate-500 uppercase mb-2">Technical Size</p>
+                        <p class="text-3xl font-black text-red-500 italic italic italic italic italic">199.7 MB</p>
+                        <p class="text-[10px] text-slate-500 mt-2 italic italic italic italic italic italic">Latest Update: Dec 15, 2025</p>
                     </div>
                 </div>
             </div>
         </div>
 
         <div id="section-dxb" class="hidden space-y-10 animate-fadeIn">
-            <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
-                <div class="data-card bg-blue-600/10 border-blue-500/20 text-center">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-6 text-center">
+                <div class="data-card bg-blue-600/10 border-blue-500/20">
                     <p class="text-[10px] font-bold text-blue-400 uppercase mb-2">iOS Visibility Score</p>
-                    <p class="text-4xl font-black">57.73 <span class="text-xs text-slate-500">UAE</span></p>
+                    <p class="text-4xl font-black">57.73 <span class="text-xs text-slate-500 italic">UAE</span></p>
                 </div>
-                <div class="data-card bg-red-600/10 border-red-500/20 text-center">
+                <div class="data-card bg-red-600/10 border-red-500/20">
                     <p class="text-[10px] font-bold text-red-400 uppercase mb-2">Android Visibility Score</p>
-                    <p class="text-4xl font-black text-red-500">32.56 <span class="text-xs text-slate-500">UAE</span></p>
+                    <p class="text-4xl font-black text-red-500">32.56 <span class="text-xs text-slate-500 italic italic italic italic italic">Decline</span></p>
                 </div>
-                <div class="data-card text-center">
+                <div class="data-card">
                     <p class="text-[10px] font-bold text-slate-500 uppercase mb-2">iOS Category Rank</p>
-                    <p class="text-4xl font-black text-white">#34 <span class="text-xs text-slate-500 italic">Travel (UAE)</span></p>
+                    <p class="text-4xl font-black text-white italic italic italic italic">#34 <span class="text-xs text-emerald-400 font-bold italic italic">↑ 22 Rank</span></p>
                 </div>
-                <div class="data-card text-center">
-                    <p class="text-[10px] font-bold text-slate-500 uppercase mb-2">Android Rating</p>
-                    <p class="text-4xl font-black text-emerald-400">4.00 <span class="text-xs text-slate-500 italic">Avg</span></p>
+                <div class="data-card">
+                    <p class="text-[10px] font-bold text-slate-500 uppercase mb-2">App Store Rating</p>
+                    <p class="text-4xl font-black text-emerald-400 italic italic italic italic italic">4.7 <span class="text-xs text-slate-500 italic italic">Avg</span></p>
                 </div>
             </div>
 
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
-                <div class="data-card">
-                    <h3 class="text-lg font-black italic text-blue-400 mb-6 uppercase border-b border-slate-800 pb-4">iOS Organic Download Breakdown (UAE)</h3>
+                <div class="data-card border-t-4 border-blue-500">
+                    <h3 class="text-lg font-black italic text-blue-400 mb-6 uppercase border-b border-slate-800 pb-4 italic italic">iOS Organic Download Breakdown (UAE)</h3>
                     <div class="overflow-x-auto">
-                        <table class="w-full text-left text-xs">
-                            <thead><tr class="text-slate-500 uppercase border-b border-slate-800">
-                                <th class="pb-4">Keyword</th><th class="pb-4">Vol</th><th class="pb-4">Rank</th><th class="pb-4 text-right">Share</th>
+                        <table class="w-full text-left text-xs italic italic">
+                            <thead><tr class="text-slate-500 uppercase border-b border-slate-800 italic italic italic italic">
+                                <th class="pb-4 italic italic italic italic italic">Keyword</th><th class="pb-4 italic italic italic italic italic">Vol</th><th class="pb-4 italic italic italic italic italic">Rank</th><th class="pb-4 text-right italic italic italic italic italic">Share</th>
                             </tr></thead>
-                            <tbody class="divide-y divide-slate-800/50">
-                                <tr><td class="py-4 font-bold italic">dxb</td><td><span class="vol-badge">45</span></td><td><span class="rank-badge">#4</span></td><td class="text-right font-black text-blue-400">55.44%</td></tr>
-                                <tr><td class="py-4 font-bold italic">dubai airport</td><td><span class="vol-badge">31</span></td><td><span class="rank-badge">#1</span></td><td class="text-right font-black text-blue-400">36.57%</td></tr>
-                                <tr><td class="py-4 font-bold italic italic">dubai duty free</td><td><span class="vol-badge">18</span></td><td>#2</td><td class="text-right font-black text-blue-400">4.68%</td></tr>
-                                <tr><td class="py-4 font-bold italic italic italic">dubai flights</td><td><span class="vol-badge">5</span></td><td><span class="rank-badge">#1</span></td><td class="text-right font-black text-blue-400">2.51%</td></tr>
+                            <tbody class="divide-y divide-slate-800/50 italic italic italic italic italic italic">
+                                <tr><td class="py-4 font-bold italic italic italic italic italic italic italic">dxb</td><td><span class="vol-badge italic italic italic italic italic italic italic italic">45</span></td><td><span class="rank-badge italic italic italic italic italic italic italic italic italic">#4</span></td><td class="text-right font-black text-blue-400 italic italic italic italic italic italic italic italic italic italic italic">55.44%</td></tr>
+                                <tr><td class="py-4 font-bold italic italic italic italic italic italic italic">dubai airport</td><td><span class="vol-badge italic italic italic italic italic italic italic italic">31</span></td><td><span class="rank-badge italic italic italic italic italic italic italic italic italic">#1</span></td><td class="text-right font-black text-blue-400 italic italic italic italic italic italic italic italic italic italic italic italic">36.57%</td></tr>
+                                <tr><td class="py-4 font-bold italic italic italic italic italic italic italic italic">dubai duty free</td><td><span class="vol-badge italic italic italic italic italic italic italic italic italic">18</span></td><td>#2</td><td class="text-right font-black text-blue-400 italic italic italic italic italic italic italic italic italic italic italic italic italic">4.68%</td></tr>
+                                <tr><td class="py-4 font-bold italic italic italic italic italic italic italic italic">dubai flights</td><td><span class="vol-badge italic italic italic italic italic italic italic italic italic">5</span></td><td><span class="rank-badge italic italic italic italic italic italic italic italic italic">#1</span></td><td class="text-right font-black text-blue-400 italic italic italic italic italic italic italic italic italic italic italic italic italic">2.51%</td></tr>
                             </tbody>
                         </table>
                     </div>
                 </div>
-
                 <div class="data-card border-t-4 border-red-500">
                     <h3 class="text-lg font-black italic text-red-400 mb-6 uppercase border-b border-slate-800 pb-4">Android Organic Download Breakdown (UAE)</h3>
                     <div class="flex flex-col items-center justify-center h-48 text-center space-y-4">
@@ -144,7 +164,49 @@
                     </div>
                 </div>
             </div>
+
+            <div class="data-card">
+                <h3 class="text-lg font-black italic mb-6">Dubai (DXB) Metadata & Technical Details</h3>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-sm">
+                    <div class="bg-slate-900/50 p-6 rounded-2xl border border-slate-800">
+                        <p class="text-[10px] font-bold text-slate-500 uppercase mb-2 italic">Metadata Audit</p>
+                        <p>Title: <span class="font-bold underline italic">Dubai Airport: Flight Info (26/30)</span></p>
+                        <p class="text-emerald-400 mt-1 italic italic italic">Subtitle: Flight arrivals and departures (30/30)</p>
+                    </div>
+                    <div class="bg-slate-900/50 p-6 rounded-2xl border border-slate-800 italic">
+                        <p class="text-[10px] font-bold text-slate-500 uppercase mb-2">Search Penetration</p>
+                        <p>Brand Dominance: <span class="font-bold">dxb (%55.44 Share)</span></p>
+                        <p>Competitor Rank: <span class="font-bold underline">#34 UAE Travel</span></p>
+                    </div>
+                    <div class="bg-slate-900/50 p-6 rounded-2xl border border-slate-800 text-center italic italic italic italic">
+                        <p class="text-[10px] font-bold text-slate-500 uppercase mb-2">Technical Size</p>
+                        <p class="text-3xl font-black text-emerald-400 italic italic italic italic italic">64.6 MB</p>
+                        <p class="text-[10px] text-slate-500 mt-2 italic italic italic italic italic italic">Latest Update: Sep 25, 2025</p>
+                    </div>
+                </div>
+            </div>
         </div>
+
+        <div id="section-ams" class="hidden space-y-10 animate-fadeIn">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-6 text-center">
+                <div class="data-card bg-amber-600/10 border-amber-500/20">
+                    <p class="text-[10px] font-bold text-amber-500 uppercase mb-2">iOS Visibility Score</p>
+                    <p class="text-4xl font-black">75.51 <span class="text-xs text-slate-500 italic">NL</span></p>
+                </div>
+                <div class="data-card bg-amber-600/10 border-amber-500/20">
+                    <p class="text-[10px] font-bold text-amber-500 uppercase mb-2">Android Visibility Score</p>
+                    <p class="text-4xl font-black">74.40 <span class="text-xs text-slate-500 italic">NL</span></p>
+                </div>
+                <div class="data-card text-center">
+                    <p class="text-[10px] font-bold text-slate-500 uppercase mb-2">Netherlands Rank</p>
+                    <p class="text-4xl font-black text-white">#5 <span class="text-xs text-slate-500 italic">Travel</span></p>
+                </div>
+                <div class="data-card text-center">
+                    <p class="text-[10px] font-bold text-slate-500 uppercase mb-2">User Trust Score</p>
+                    <p class="text-4xl font-black text-emerald-400">4.75 <span class="text-xs text-slate-500 italic">Avg</span></p>
+                </div>
+            </div>
+            </div>
 
     </main>
 
@@ -153,10 +215,15 @@
             const sections = ['iga', 'dxb', 'ams', 'global'];
             sections.forEach(s => {
                 const section = document.getElementById('section-' + s);
-                if(section) {
-                    section.style.display = (s === tabId) ? 'block' : 'none';
-                    document.getElementById('btn-' + s).classList.toggle('active', s === tabId);
-                    document.getElementById('btn-' + s).classList.toggle('text-slate-400', s !== tabId);
+                const button = document.getElementById('btn-' + s);
+                if (s === tabId) {
+                    section.classList.remove('hidden');
+                    button.classList.add('active');
+                    button.classList.remove('text-slate-400');
+                } else {
+                    section.classList.add('hidden');
+                    button.classList.remove('active');
+                    button.classList.add('text-slate-400');
                 }
             });
         }
